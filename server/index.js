@@ -16,12 +16,6 @@ mongoose
   .then(() => {
     console.log("connected to database");
   });
-/*
-mongoose.connect("mongodb://localhost/auth", { useNewUrlParser: true });
-const connection = mongoose.connection;
-connection.on("connected", function () {
-  console.log("connected to db");
-});*/
 
 // App Setup
 app.use(morgan("combined"));
