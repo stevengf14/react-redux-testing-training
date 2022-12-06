@@ -12,7 +12,7 @@ const localLogin = new LocalStrategy(localOptions, (email, password, done) => {
   // Verify this email and password, call done with the user
   // if it is the correct username and password
   // otherwise, call done with false
-  User.findOne({ email_1: email }, (err, user) => {
+  User.findOne({ email }, (err, user) => {
     if (err) {
       return done(err);
     }
