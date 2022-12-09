@@ -1,12 +1,16 @@
 import React from "react";
-import { reduxForm, Field } from "redux-form";
+import { Field, reduxForm } from "redux-form";
+import { compose } from "redux";
+import { connect } from "react-redux";
+import * as actions from "../../actions";
 
-function Signup(props) {
+const Signup = (props) => {
+  const { handleSubmit } = props;
+
   const onSubmit = (formProps) => {
-    console.log(formProps);
+    props.signup(formProps);
   };
 
-  const { handleSubmit } = props;
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
       <fieldset>
@@ -22,8 +26,11 @@ function Signup(props) {
           autoComplete="none"
         />
       </fieldset>
-      <button>Sign Up!</button>
+      <button type="submit">Sign Up!</button>
     </form>
   );
-}
-export default reduxForm({ form: "signup" })(Signup);
+};
+export default compose(
+  connect(null, actions),
+  reduxForm({ form: "signup" })
+)(Signup);
