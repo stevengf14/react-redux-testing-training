@@ -2,13 +2,17 @@ import React from "react";
 import { Field, reduxForm } from "redux-form";
 import { compose } from "redux";
 import { connect } from "react-redux";
+import { useNavigate } from "react-router-dom";
 import * as actions from "../../actions";
 
 const Signup = (props) => {
   const { handleSubmit } = props;
+  const navigate = useNavigate();
 
   const onSubmit = (formProps) => {
-    props.signup(formProps);
+    props.signup(formProps, () => {
+      navigate("/feature");
+    });
   };
 
   return (
@@ -26,11 +30,16 @@ const Signup = (props) => {
           autoComplete="none"
         />
       </fieldset>
+      <div>{props.errorMessage}</div>
       <button type="submit">Sign Up!</button>
     </form>
   );
 };
+function mapStateToProps(state) {
+  return { errorMessage: state.auth.errorMessage };
+}
+
 export default compose(
-  connect(null, actions),
+  connect(mapStateToProps, actions),
   reduxForm({ form: "signup" })
 )(Signup);
