@@ -9,6 +9,7 @@ import reducers from "./reducers";
 import App from "./components/App";
 import Welcome from "./components/Welcome";
 import Signup from "./components/auth/Signup";
+import Feature from "./components/Feature";
 
 const store = createStore(reducers, {}, applyMiddleware(reduxThunk));
 
@@ -20,6 +21,7 @@ root.render(
         <Routes>
           <Route path="/" exact element={<Welcome />} />
           <Route path="/signup" exact element={<Signup />} />
+          <Route path="/feature" exact element={<Feature />} />
         </Routes>
       </App>
     </BrowserRouter>
