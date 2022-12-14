@@ -28,7 +28,7 @@ In progress...
 
 
 ## Available Scripts
-In the project directory comments-testing-app, you can run:
+- In the project 'comments-testing-app', you can run:
 
 ### `npm start`
 
@@ -40,7 +40,10 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 Launches the test runner in the interactive watch mode.\
 
 
-In the project server, you can run:
+- In the project 'server', you can run:
 
-### `node index.js`
+### `npm run dev`
 
+- In the project 'client', you can run:
+
+### `npm start`
