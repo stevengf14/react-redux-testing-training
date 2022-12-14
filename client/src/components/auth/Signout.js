@@ -5,7 +5,6 @@ import * as actions from "../../actions";
 const Signout = (props) => {
   useEffect(() => {
     props.signout();
-    console.log('signout')
   });
   return <div>Sorry to see you go</div>;
 };
