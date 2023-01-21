@@ -24,7 +24,7 @@ There are dozens of great tutorials online for React and Redux, but none of them
 I have built the course that I would have wanted to take when I was learning React and Redux.  A course that explains the concepts and how they're implemented in the best order for you to learn and deeply understand them.
 
 ## Certificate
-In progress...
+https://www.udemy.com/certificate/UC-a94ee5bf-d5ad-4b7f-a431-c848d0e19d0f/
 
 
 ## Available Scripts
